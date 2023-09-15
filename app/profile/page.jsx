@@ -1,5 +1,5 @@
 "use client";
-import ProfileCard from "@components/Profile";
+import Profile from "@components/Profile";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -46,7 +46,7 @@ const MyProfile = () => {
 
   return (
     <>
-      <ProfileCard
+      <Profile
         name="My"
         description="This is my profile"
         data={posts}
