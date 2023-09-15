@@ -1,6 +1,5 @@
 "use client";
 import Form from "@components/Form";
-import ProtectedRoute from "@components/ProtectedRoute";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -41,15 +40,13 @@ const CreatePrompt = () => {
   };
 
   return (
-    <ProtectedRoute user={session?.user}>
-      <Form
-        type="Create"
-        post={post}
-        setPost={setPost}
-        submitting={submitting}
-        handleSubmit={createPrompt}
-      />
-    </ProtectedRoute>
+    <Form
+      type="Create"
+      post={post}
+      setPost={setPost}
+      submitting={submitting}
+      handleSubmit={createPrompt}
+    />
   );
 };
 
